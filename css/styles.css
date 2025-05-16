@@ -17,27 +17,22 @@ body {
 }
 
 /* Estilos del header */
-header {
-    text-align: center;
-}
-
-header img {
-    width: 200px;
-}
 
 nav {
-    background-color: #796c59;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    padding: 8px;
+}
+
+.logo {
+    width: 100px;
 }
 
 nav ul {
+    background-color: #796c59;
     display: flex;
     list-style: none;
-    padding: 0 20px;
-    margin: 10px;
+    padding: 10px 20px;
 }
 
 nav ul li {
@@ -244,7 +239,7 @@ nav ul li a {
         "faqs image"
         "location image";
     grid-template-columns: 60% 40%;
-    grid-template-rows: auto auto auto;
+    grid-template-rows: 25% 50% 25%;
     gap: 5px;
     justify-content: center;
     justify-items: center;
@@ -261,6 +256,18 @@ nav ul li a {
 .faqs {
     grid-area: faqs;
     padding: 20px;
+}
+
+.accordion-button {
+    background-color: #796c59;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: #b5a58d;
+}
+
+.accordion-collapse {
+    background-color: #f8ebd6;
 }
 
 .about-us-img {
