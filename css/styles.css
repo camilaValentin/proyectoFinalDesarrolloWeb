@@ -12,7 +12,7 @@ body {
     background-color: #f8ebd6;
     font-family: Nunito, sans-serif;
     margin: 0;
-    padding: 20px;
+    padding: 10px;
     text-shadow: 4px 4px 11px rgba(0, 0, 0, 0.58);
 }
 
@@ -25,7 +25,7 @@ nav {
 }
 
 .logo {
-    width: 100px;
+    width: 7rem;
 }
 
 nav ul {
@@ -33,6 +33,7 @@ nav ul {
     display: flex;
     list-style: none;
     padding: 10px 20px;
+    margin: 0;
 }
 
 nav ul li {
@@ -49,7 +50,7 @@ nav ul li a {
     background-image: url(../media/trucksBanner.png);
     background-repeat: no-repeat;
     background-size: cover;
-    height: 250px;
+    height: 15.6rem;
     background-position: center;
     position: relative;
     display: flex;
@@ -72,7 +73,7 @@ nav ul li a {
 }
 
 .banner-text {
-    font-size: 30px;
+    font-size: 1.8rem;
     position: relative;
     z-index: 2;
     color: #ffffff;
@@ -85,26 +86,26 @@ nav ul li a {
     grid-template-areas:
         "presentation choose"
         "companies companies";
-    grid-template-columns: 50% 50%;
-    grid-template-rows: 75% 25%;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
     align-items: center;
 }
 
 .presentation {
     grid-area: presentation;
     display: flex;
+    gap: 1.25rem;
+    align-items: center;
 }
 
 .presentation img {
-    width: 300px;
+    width: 19rem;
     border: 1px solid #000000;
     box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
 }
 
 .presentation p {
     font-size: 18px;
-    margin-left: 50px;
-    margin-top: 50px;
     text-align: left;
 }
 
@@ -112,8 +113,8 @@ nav ul li a {
     grid-area: choose;
     background-color: #a3947e;
     color: #ffffff;
-    padding: 20px;
-    margin-top: 20px;
+    padding: 1.25rem;
+    margin-top: 1.25rem;
     text-align: center;
 }
 
@@ -129,7 +130,6 @@ nav ul li a {
 .feature-item {
     font-style: italic;
     display: flex;
-    flex-direction: row;
     align-items: center;
     gap: 20px;
     background-color: rgba(255, 255, 255, 0.05);
@@ -137,8 +137,8 @@ nav ul li a {
 }
 
 .feature-item img {
-    width: 80px;
-    height: 80px;
+    width: 5rem;
+    height: 5rem;
     object-fit: cover;
     border-radius: 8px;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
@@ -158,31 +158,127 @@ nav ul li a {
 /* Estilos del sector de empresas */
 .companies {
     grid-area: companies;
-    padding: 40px 20px;
+    padding: 2.5rem 1.25rem;
     text-align: center;
+    margin: 0 auto;
 }
 
 .companies h2 {
-    font-size: 24px;
+    font-size: 1.5rem;
 }
 
 .companies-logos img {
-    width: 120px;
+    width: 7.5rem;
 }
 
 .companies p {
-    font-size: 16px;
+    font-size: 1rem;
     color: #333;
+    margin-top: 1rem;
 }
 
 /* Estilos servicios */
+
+.services-grid {
+    display: grid;
+    grid-template-areas:
+        "types benefits"
+        "testimonials testimonials";
+    grid-template-columns: 2fr 2fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 1.25rem;
+    justify-items: center;
+    align-items: center;
+}
+
 .services {
     padding: 20px;
     text-align: center;
 }
 
 .services h1 {
-    font-size: 24px;
+    font-size: 2.5rem;
+}
+
+.services p {
+    font-size: 1.1rem;
+}
+
+.types-services {
+    grid-area: types;
+    background-color: #a3947e;
+    color: #ffffff;
+    align-items: center;
+    padding: 1.25rem;
+    display: flex;
+    justify-content: space-around;
+    box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+.service-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.service-item img {
+    height: 9rem;
+    margin-bottom: 1rem;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.service-item ul li {
+    margin: 0.3rem 0;
+    padding-left: 1rem;
+}
+
+.benefits {
+    grid-area: benefits;
+    padding: 1.25rem;
+}
+
+.benefits h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.benefits ul {
+    list-style-type: disc;
+    padding-left: 1.8rem;
+    font-size: 1.1rem;
+}
+
+.testimonials {
+    grid-area: testimonials;
+    width: 70%;
+    padding: 1.25rem;
+    background-color: #f5f3f0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.testimonials h2 {
+    text-align: center;
+    font-size: 1.8rem;
+    color: #4a433f;
+    margin-bottom: 25px;
+}
+
+.testimonial-item {
+    background-color: #fff;
+    border-left: 5px solid #796c59;
+    padding: 1rem 1.23rem;
+    margin: 1.25rem 0;
+    font-style: italic;
+    color: #5a534f;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.testimonial-name {
+    margin-top: 0.6rem;
+    text-align: right;
+    font-weight: 600;
+    color: #796c59;
+    font-style: normal;
 }
 
 /* Estilos tipos de servicios */
@@ -204,7 +300,7 @@ nav ul li a {
 }
 
 .types-services img {
-    height: 150px;
+    height: 9rem;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
     border: 0.5px solid #000000;
 }
@@ -264,6 +360,7 @@ nav ul li a {
 
 .accordion-button:not(.collapsed) {
     background-color: #b5a58d;
+    color: #000000;
 }
 
 .accordion-collapse {
@@ -340,7 +437,7 @@ footer p {
 }
 
 .social-media img {
-    width: 25px;
+    width: 1.5rem;
     margin-right: 3px;
     margin-left: 10px;
 }
@@ -354,7 +451,7 @@ footer p {
 }
 
 .contact-info img {
-    width: 25px;
+    width: 1.5rem;
     margin-right: 10px;
     margin-left: 10px;
     gap: 20px;
