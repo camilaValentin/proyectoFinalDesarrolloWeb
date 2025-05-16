@@ -4,6 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="../css/styles.css">
     <title>Nosotros- Milo S.R.L</title>
 </head>
@@ -11,14 +15,14 @@
 <body>
     <header>
         <!-- Encabezado de la página - Logo -->
-        <img src="../media/logoWithName.png" alt="Logo empresa">
+        <img src="../media/logoWithName.png" class="border-10" alt="Logo empresa">
         <!-- Menú de navegación -->
-        <nav>
+        <nav class="border-10">
             <ul>
                 <li><a href="../index.html">Inicio</a></li>
                 <li><a href="./servicios.html">Servicios</a></li>
                 <li><a href="./flota.html">Flota</a></li>
-                <li><a href="#">Nosotros</a></li>
+                <li><a href="#" class="bold">Nosotros</a></li>
                 <li><a href="./contacto.html">Contacto</a></li>
             </ul>
         </nav>
@@ -26,13 +30,13 @@
 
     <main>
         <!-- Banner -->
-        <section class="banner">
+        <section class="banner border-10">
             <div class="banner-text">
                 <h1>Logística Milo S.R.L.</h1>
                 <p>Su mejor opción en logística y transporte</p>
             </div>
         </section>
-        <section class="about-us">
+        <section class="contenedor-grid-about-us">
             <div class="about-us-text">
                 <h1>Sobre nosotros</h1>
                 <p>En Logística Milo S.R.L. nos dedicamos a ofrecer soluciones integrales en logística y transporte. Con
@@ -44,23 +48,142 @@
                     cada cliente. Contamos con un equipo de profesionales altamente capacitados y una flota moderna y
                     eficiente para garantizar la seguridad y puntualidad en cada entrega.</p>
             </div>
-            <div class="about-us-img">
-                <img src="../media/truckInRoute.png" alt="Camión en ruta">
-                <img src="../media/vanInRoute.png" alt="Furgoneta en ruta">
-                <img src="../media/refrigerated.png" alt="Furgoneta refrigerada">
-                <img src="../media/utilitaryInRoute.png" alt="Utilitario en ruta">
+
+            <div class="faqs">
+                <h2>Preguntas frecuentes</h2>
+                <div class="accordion" id="accordionPanelsStayOpenExample">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
+                                aria-controls="panelsStayOpen-collapseOne">
+                                ¿Qué tipo de servicios ofrecen?
+                            </button>
+                        </h2>
+                        <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
+                            <div class="accordion-body">
+                                Ofrecemos una amplia gama de servicios de logística y
+                                transporte, incluyendo transporte nacional e internacional, almacenamiento y
+                                distribución.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false"
+                                aria-controls="panelsStayOpen-collapseTwo">
+                                ¿Cómo puedo hacer un seguimiento de mi envío?
+                            </button>
+                        </h2>
+                        <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
+                            <div class="accordion-body">
+                                Proporcionamos tecnología de
+                                seguimiento
+                                en tiempo real para que pueda monitorear su envío en todo momento.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false"
+                                aria-controls="panelsStayOpen-collapseThree">
+                                ¿Cuál es el tiempo estimado de entrega?
+                            </button>
+                        </h2>
+                        <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse">
+                            <div class="accordion-body">
+                                El tiempo de entrega varía según la
+                                ubicación
+                                y el tipo de servicio. Contáctenos para obtener más información.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#panelsStayOpen-collapseFour" aria-expanded="false"
+                                aria-controls="panelsStayOpen-collapseFour">
+                                ¿Qué medidas de seguridad implementan?
+                            </button>
+                        </h2>
+                        <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse">
+                            <div class="accordion-body">
+                                Contamos con un equipo de seguridad y tecnología avanzada para garantizar la
+                                seguridad de
+                                su carga en todo momento.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#panelsStayOpen-collapseFive" aria-expanded="false"
+                                aria-controls="panelsStayOpen-collapseFive">
+                                ¿Cómo puedo contactarlos?
+                            </button>
+                        </h2>
+                        <div id="panelsStayOpen-collapseFive" class="accordion-collapse collapse">
+                            <div class="accordion-body">
+                                Puede contactarnos a través de nuestro formulario de contacto en la página web o
+                                llamándonos
+                                al número proporcionado en la sección de contacto.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#panelsStayOpen-collapseSix" aria-expanded="false"
+                                aria-controls="panelsStayOpen-collapseSix">
+                                ¿Tienen servicio de atención al cliente?
+                            </button>
+                        </h2>
+                        <div id="panelsStayOpen-collapseSix" class="accordion-collapse collapse">
+                            <div class="accordion-body">
+                                Sí, contamos con un equipo de atención al cliente disponible 24/7 para resolver
+                                cualquier
+                                consulta o inconveniente.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#panelsStayOpen-collapseSeven" aria-expanded="false"
+                                aria-controls="panelsStayOpen-collapseSeven">
+                                ¿Qué tipo de vehículos utilizan?
+                            </button>
+                        </h2>
+                        <div id="panelsStayOpen-collapseSeven" class="accordion-collapse collapse">
+                            <div class="accordion-body">
+                                Utilizamos una flota moderna que incluye camiones de carga pesada, furgonetas, vehículos
+                                refrigerados y ligeros.
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
+
+            <div class="about-us-img border-10">
+                <img src="../media/truckInRoute.png" class="border-10" alt="Camión en ruta">
+                <img src="../media/vanInRoute.png" class="border-10" alt="Furgoneta en ruta">
+                <img src="../media/refrigerated.png" class="border-10" alt="Furgoneta refrigerada">
+                <img src="../media/utilitaryInRoute.png" class="border-10" alt="Utilitario en ruta">
+            </div>
+
             <div class="location">
                 <h2>Nuestra ubicación</h2>
                 <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3282.747083222198!2d-58.41171512350219!3d-34.63583115919614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccb0f0c83ee6d%3A0x3fc8078c18104ced!2sAccenture!5e0!3m2!1ses!2sar!4v1744247156690!5m2!1ses!2sar"
                     width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    referrerpolicy="no-referrer-when-downgrade" class="border-10"></iframe>
             </div>
         </section>
     </main>
 
-    <footer>
+    <footer class="border-10">
         <!-- Pie de página -->
         <div class="social-media">
             <a href="https://www.facebook.com" target="_blank"><img src="../media/facebook.png" alt=""></a>
@@ -81,6 +204,10 @@
             <p>&copy; 2023 Logística Milo S.R.L. Todos los derechos reservados.</p>
         </div>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
+        crossorigin="anonymous"></script>
 
 </body>
 
