@@ -392,8 +392,8 @@ nav ul li a {
 }
 
 .location iframe {
-    width: 500px;
-    height: 500px;
+    width: 600px;
+    height: 600px;
     margin: 0 auto;
     display: block;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
@@ -476,6 +476,9 @@ footer p {
 
 /* Media query para celular */
 @media (max-width: 767px) {
+
+    /* Estilos navbar */
+
     nav {
         flex-direction: column;
         align-items: flex-start;
@@ -484,8 +487,6 @@ footer p {
     .banner {
         margin-top: 0.3rem;
     }
-
-    /* Estilos Index */
 
     .container-fluid {
         display: flex;
@@ -510,6 +511,8 @@ footer p {
         border-top: 1px solid #fff;
         text-align: center;
     }
+
+    /* Estilos Index */
 
     .contenedor-grid-main {
         display: flex;
@@ -583,6 +586,96 @@ footer p {
         width: 300px;
     }
 
+
+    /* Estilos del footer */
+    footer {
+        flex-direction: column;
+        margin-top: 0;
+    }
+
+    footer p {
+        font-size: 12px;
+    }
+
+    .social-media img {
+        width: 1.2rem;
+    }
+
+    .contact-info {
+        flex-direction: column;
+        align-items: flex-start;
+        margin: 0.4rem;
+        gap: 10px;
+    }
+
+    .contact-info img {
+        width: 1.2rem;
+    }
+}
+
+/* Media query para tablet */
+@media (max-width: 1024px) {
+
+    /* Estilos navbar */
+
+    .navbar-collapse {
+        display: flex;
+    }
+
+    /* Estilos Index */
+    .contenedor-grid-main {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .presentation {
+        margin: 0.5rem;
+    }
+
+    .companies-logos img {
+        width: 5.5rem;
+    }
+
+    /* Estilos Servicios */
+
+    .services-grid {
+        gap: 0;
+    }
+
+    .types-services {
+        flex-direction: column;
+        gap: 0;
+    }
+
+
+    /* Estilos Flota */
+    .info-trucks {
+        text-align: center;
+    }
+
+    .images-trucks {
+        width: 90%;
+        margin-bottom: 1rem;
+    }
+
+
+    /* Estilos Nosotros */
+    .contenedor-grid-about-us {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .about-us-text {
+        margin-top: 1rem;
+    }
+
+    .location iframe {
+        margin-bottom: 1rem;
+        height: 500px;
+        width: 500px;
+    }
 
     /* Estilos del footer */
     footer {
