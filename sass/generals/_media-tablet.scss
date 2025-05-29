@@ -1,0 +1,90 @@
+@use "../generals/variables" as *;
+
+/* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+/* Estilos de Tablet */
+@media (min-width:481px) and (max-width: 1024px) {
+
+    /* Estilos navbar */
+    .navbar-collapse {
+        @include flex();
+    }
+
+    /* Estilos Index */
+    .contenedor-grid-main {
+        @include flex($direction: column);
+    }
+
+    .presentation {
+        margin: 0.5rem;
+    }
+
+    .companies-logos {
+        img {
+            width: 5.5rem;
+        }
+    }
+
+    /* Estilos Servicios */
+
+    .services-grid {
+        gap: 0;
+    }
+
+    .types-services {
+        @include flex($direction: column, $gap: 0);
+    }
+
+
+    /* Estilos Flota */
+    .info-trucks {
+        text-align: center;
+    }
+
+    .images-trucks {
+        width: 90%;
+        margin-bottom: 1rem;
+    }
+
+
+    /* Estilos Nosotros */
+    .contenedor-grid-about-us {
+        @include flex($direction: column, $align: center, $gap: .625rem);
+    }
+
+    .about-us-text {
+        margin-top: 1rem;
+    }
+
+
+    .iframe {
+        margin-bottom: 1rem;
+        height: 31.25rem;
+        width: 31.25rem;
+    }
+
+
+    /* Estilos del footer */
+    footer {
+        @include flex($direction: column);
+        margin-top: 0;
+
+        p {
+            font-size: .75rem;
+        }
+    }
+
+    .social-media {
+        img {
+            width: 1.2rem;
+        }
+    }
+
+    .contact-info {
+        @include flex($direction: column, $align: flex-start, $gap: .625rem);
+        margin: 0.4rem;
+
+        img {
+            width: 1.2rem;
+        }
+    }
+}

@@ -1,0 +1,22 @@
+@use "../generals/variables" as *;
+
+/* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+/* Estilos Flota */
+.info-trucks {
+    @include flex($direction: column, $align: center);
+    margin-top: 1.25rem;
+    margin-bottom: 1.25rem;
+}
+
+.images-trucks {
+    background-color: $third-color;
+    padding: .625rem;
+    box-shadow: .625rem .625rem .3125rem 0rem rgba(0, 0, 0, 0.75);
+    width: 75%;
+    margin: 0rem auto;
+
+    img {
+        margin: .625rem;
+        box-shadow: .125rem .125rem .3125rem rgba(0, 0, 0, 0.3);
+    }
+}

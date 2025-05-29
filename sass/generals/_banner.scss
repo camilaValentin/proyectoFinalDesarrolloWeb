@@ -1,0 +1,35 @@
+@use "variables" as *;
+
+
+/* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+/* Estilos del banner */
+.banner {
+    background-image: url(../media/trucksBanner.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 15.6rem;
+    background-position: center;
+    position: relative;
+    @include flex ($justify: center, $align: center);
+    text-align: center;
+    margin-top: 1.25rem;
+}
+
+.banner::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 10px;
+}
+
+.banner-text {
+    font-size: 1.8rem;
+    position: relative;
+    z-index: 2;
+    color: $white;
+}

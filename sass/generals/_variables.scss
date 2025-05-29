@@ -1,0 +1,67 @@
+// Font
+$font: Nunito, sans-serif;
+
+// Colors
+$primary-color: #f8ebd6;
+$secondary-color: #796c59;
+$third-color: #a3947e;
+$fourth-color: #f5f3f0;
+$fifth-color: #5a534f;
+$sixth-color: #4a433f;
+$seventh-color: #b5a58d;
+$eighth-color: #f8ebd6;
+$white: #ffffff;
+
+
+// Mixins
+@mixin flex ($direction: null, $justify: null, $align: null, $gap: null) {
+    display: flex;
+
+    @if $direction {
+        flex-direction: $direction;
+    }
+
+    @if $justify {
+        justify-content: $justify;
+    }
+
+    @if $align {
+        align-items: $align;
+    }
+
+    @if $gap {
+        gap: $gap;
+    }
+}
+
+@mixin grid($columns: null, $rows: null, $gap: null, $column-gap: null, $row-gap: null, $align: null, $justify: null) {
+    display: grid;
+
+    @if $columns {
+        grid-template-columns: $columns;
+    }
+
+    @if $rows {
+        grid-template-rows: $rows;
+    }
+
+    @if $gap {
+        gap: $gap;
+    }
+
+    @if $column-gap {
+        column-gap: $column-gap;
+    }
+
+    @if $row-gap {
+        row-gap: $row-gap;
+    }
+
+    @if $align {
+        align-items: $align;
+    }
+
+    @if $justify {
+        justify-items: $justify;
+    }
+}

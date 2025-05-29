@@ -1,0 +1,92 @@
+@use "../generals/variables" as *;
+
+/* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+/* Estilos de la primer parte del Home */
+.contenedor-grid-main {
+    @include grid ($columns: repeat(2, 1fr), $rows: auto auto, $align: center);
+    grid-template-areas:
+        "presentation choose"
+        "companies companies";
+}
+
+.presentation {
+    grid-area: presentation;
+    @include flex ($align: center);
+    gap: 1.25rem;
+
+    img {
+        width: 19rem;
+        border: 1px solid #000000;
+        box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+    }
+
+    p {
+        font-size: 1.125rem;
+        text-align: left;
+    }
+}
+
+.choose-us {
+    grid-area: choose;
+    background-color: $third-color;
+    color: $white;
+    padding: 1.25rem;
+    margin-top: 1.25rem;
+    text-align: center;
+}
+
+.features {
+    @include flex($direction: column, $gap: 1.25rem);
+    margin: 1.25rem auto;
+    max-width: 500px;
+    width: 100%;
+}
+
+.feature-item {
+    font-style: italic;
+    @include flex($align: center, $gap: 1.25rem);
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 10px;
+
+    img {
+        width: 5rem;
+        height: 5rem;
+        object-fit: cover;
+        border-radius: .5rem;
+        box-shadow: .125rem .125rem .3125rem rgba(0, 0, 0, 0.3);
+        border: .0313rem solid #000000;
+    }
+
+    p {
+        margin: 0;
+        font-size: 1.125rem;
+    }
+}
+
+.highlight {
+    font-size: 1.125rem;
+    font-weight: 500;
+}
+
+/* ------------------------------------------------------------------------------------------ */
+/* Estilos del sector de empresas */
+.companies {
+    grid-area: companies;
+    padding: 2.5rem 1.25rem;
+    text-align: center;
+    margin: 0 auto;
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    img {
+        width: 7.5rem;
+    }
+
+    p {
+        font-size: 1rem;
+        color: #333;
+        margin-top: 1rem;
+    }
+}

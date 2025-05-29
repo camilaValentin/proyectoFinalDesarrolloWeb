@@ -1,0 +1,18 @@
+@use "variables" as *;
+
+.border-10 {
+    border-radius: 10px;
+}
+
+.bold {
+    font-weight: 700;
+}
+
+/* Estilos del body */
+body {
+    background-color: $primary-color;
+    font-family: $font;
+    margin: 0;
+    padding: 10px;
+    text-shadow: 4px 4px 11px rgba(0, 0, 0, 0.58);
+}

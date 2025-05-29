@@ -1,0 +1,71 @@
+@use "variables" as *;
+
+/* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+/* Estilos del header */
+
+nav {
+    @include flex ($justify: space-between, $align: center);
+
+    ul {
+        @include flex ();
+        list-style: none;
+        background-color: $secondary-color;
+        padding: .625rem 1.25rem;
+        margin-left: auto;
+
+        li {
+            margin: 0 .625rem;
+
+            a {
+                text-decoration: none;
+                color: $white;
+            }
+        }
+    }
+}
+
+.logo {
+    width: 7rem;
+}
+
+/* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+/* Estilos del footer */
+
+footer {
+    background-color: $secondary-color;
+    color: $white;
+    @include flex ($justify: space-around, $align: center);
+    width: 100%;
+    margin-top: 1.25rem;
+    padding: .625rem;
+
+    p {
+        margin: 0;
+    }
+}
+
+.social-media {
+    img {
+        width: 1.5rem;
+        margin-right: .1875rem;
+        margin-left: .625rem;
+    }
+}
+
+.contact-info {
+    @include flex ($align: center, $gap: 6.25rem);
+    margin-right: .625rem;
+    margin-left: .625rem;
+
+    img {
+        width: 1.5rem;
+        margin-right: .625rem;
+        margin-left: .625rem;
+        gap: 1.25rem;
+        object-fit: cover;
+    }
+}
+
+.info-item {
+    @include flex ($align: center);
+}

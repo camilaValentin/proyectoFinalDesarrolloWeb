@@ -1,0 +1,67 @@
+@use "../generals/variables" as *;
+
+/* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+/* Estilos de Nosotros */
+.contenedor-grid-about-us {
+    @include grid($columns: 60% 40%, $rows: 25% 50% 25%, $align: center, $justify: center, $gap: 1.25rem);
+    grid-template-areas:
+        "text image"
+        "faqs image"
+        "location image";
+    justify-content: center;
+    text-align: center;
+}
+
+.about-us-text {
+    grid-area: text;
+    font-size: 1.125rem;
+    width: 75%;
+}
+
+.faqs {
+    grid-area: faqs;
+    padding: 1.25rem;
+}
+
+.accordion-button {
+    background-color: $secondary-color;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: $seventh-color;
+    color: #000;
+}
+
+.accordion-collapse {
+    background-color: $eighth-color;
+}
+
+.about-us-img {
+    grid-area: image;
+    @include flex($direction: column, $align: center, $gap: .5rem);
+    justify-items: center;
+    margin: .625rem;
+    padding: .625rem;
+    background-color: $third-color;
+    box-shadow: .625rem .625rem .3125rem 0rem rgba(0, 0, 0, 0.75);
+
+    img {
+        width: 80%;
+        box-shadow: .125rem .125rem .3125rem rgba(0, 0, 0, 0.3);
+    }
+}
+
+.location {
+    grid-area: location;
+    padding: 1rem;
+    text-align: center;
+}
+
+.iframe {
+    width: 37.5rem;
+    height: 37.5rem;
+    margin: 0 auto;
+    display: block;
+    box-shadow: .125rem .125rem .3125rem rgba(0, 0, 0, 0.3);
+    border: 0;
+}

@@ -1,704 +1,635 @@
-/* Estilos generales */
 .border-10 {
-    border-radius: 10px;
+  border-radius: 10px;
 }
 
 .bold {
-    font-weight: 700;
+  font-weight: 700;
 }
 
 /* Estilos del body */
 body {
-    background-color: #f8ebd6;
-    font-family: Nunito, sans-serif;
-    margin: 0;
-    padding: 10px;
-    text-shadow: 4px 4px 11px rgba(0, 0, 0, 0.58);
+  background-color: #f8ebd6;
+  font-family: Nunito, sans-serif;
+  margin: 0;
+  padding: 10px;
+  text-shadow: 4px 4px 11px rgba(0, 0, 0, 0.58);
 }
 
+/* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 /* Estilos del header */
-
 nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+nav ul {
+  display: flex;
+  list-style: none;
+  background-color: #796c59;
+  padding: 0.625rem 1.25rem;
+  margin-left: auto;
+}
+nav ul li {
+  margin: 0 0.625rem;
+}
+nav ul li a {
+  text-decoration: none;
+  color: #ffffff;
 }
 
 .logo {
-    width: 7rem;
+  width: 7rem;
 }
 
-nav ul {
-    background-color: #796c59;
-    display: flex;
-    list-style: none;
-    padding: 10px 20px;
-    margin-left: auto;
-}
-
-nav ul li {
-    margin: 0 10px;
-}
-
-nav ul li a {
-    color: #ffffff;
-    text-decoration: none;
-}
-
-/* Estilos del banner*/
-.banner {
-    background-image: url(../media/trucksBanner.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 15.6rem;
-    background-position: center;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    margin-top: 20px;
-}
-
-.banner::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.2);
-    z-index: 1;
-    border-radius: 10px;
-}
-
-.banner-text {
-    font-size: 1.8rem;
-    position: relative;
-    z-index: 2;
-    color: #ffffff;
-}
-
-/* Estilos del primer texto de Home */
-
-.contenedor-grid-main {
-    display: grid;
-    grid-template-areas:
-        "presentation choose"
-        "companies companies";
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto auto;
-    align-items: center;
-}
-
-.presentation {
-    grid-area: presentation;
-    display: flex;
-    gap: 1.25rem;
-    align-items: center;
-}
-
-.presentation img {
-    width: 19rem;
-    border: 1px solid #000000;
-    box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
-}
-
-.presentation p {
-    font-size: 18px;
-    text-align: left;
-}
-
-.choose-us {
-    grid-area: choose;
-    background-color: #a3947e;
-    color: #ffffff;
-    padding: 1.25rem;
-    margin-top: 1.25rem;
-    text-align: center;
-}
-
-.features {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    margin: 20px auto;
-    max-width: 500px;
-    width: 100%;
-}
-
-.feature-item {
-    font-style: italic;
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    background-color: rgba(255, 255, 255, 0.05);
-    padding: 10px;
-}
-
-.feature-item img {
-    width: 5rem;
-    height: 5rem;
-    object-fit: cover;
-    border-radius: 8px;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-    border: 0.5px solid #000000;
-}
-
-.feature-item p {
-    margin: 0;
-    font-size: 18px;
-}
-
-.highlight {
-    font-size: 18px;
-    font-weight: 500;
-}
-
-/* Estilos del sector de empresas */
-.companies {
-    grid-area: companies;
-    padding: 2.5rem 1.25rem;
-    text-align: center;
-    margin: 0 auto;
-}
-
-.companies h2 {
-    font-size: 1.5rem;
-}
-
-.companies-logos img {
-    width: 7.5rem;
-}
-
-.companies p {
-    font-size: 1rem;
-    color: #333;
-    margin-top: 1rem;
-}
-
-/* Estilos servicios */
-
-.services-grid {
-    display: grid;
-    grid-template-areas:
-        "types benefits"
-        "testimonials testimonials";
-    grid-template-columns: 2fr 2fr;
-    grid-template-rows: 1fr 1fr;
-    gap: 1.25rem;
-    justify-items: center;
-    align-items: center;
-}
-
-.services {
-    padding: 20px;
-    text-align: center;
-}
-
-.services h1 {
-    font-size: 2.5rem;
-}
-
-.services p {
-    font-size: 1.1rem;
-}
-
-.types-services {
-    grid-area: types;
-    background-color: #a3947e;
-    color: #ffffff;
-    align-items: center;
-    padding: 1.25rem;
-    display: flex;
-    justify-content: space-around;
-    box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
-}
-
-.service-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.service-item img {
-    height: 9rem;
-    margin-bottom: 1rem;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-}
-
-.service-item ul li {
-    margin: 0.3rem 0;
-    padding-left: 1rem;
-}
-
-.benefits {
-    grid-area: benefits;
-    padding: 1.25rem;
-}
-
-.benefits h2 {
-    text-align: center;
-    margin-bottom: 1rem;
-}
-
-.benefits ul {
-    list-style-type: disc;
-    padding-left: 1.8rem;
-    font-size: 1.1rem;
-}
-
-.testimonials {
-    grid-area: testimonials;
-    width: 70%;
-    padding: 1.25rem;
-    background-color: #f5f3f0;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.testimonials h2 {
-    text-align: center;
-    font-size: 1.8rem;
-    color: #4a433f;
-    margin-bottom: 25px;
-}
-
-.testimonial-item {
-    background-color: #fff;
-    border-left: 5px solid #796c59;
-    padding: 1rem 1.23rem;
-    margin: 1.25rem 0;
-    font-style: italic;
-    color: #5a534f;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.05);
-}
-
-.testimonial-name {
-    margin-top: 0.6rem;
-    text-align: right;
-    font-weight: 600;
-    color: #796c59;
-    font-style: normal;
-}
-
-/* Estilos tipos de servicios */
-.types-services {
-    background-color: #a3947e;
-    color: #ffffff;
-    align-items: center;
-    padding: 20px;
-    display: flex;
-    justify-content: center;
-    gap: 200px;
-    box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
-}
-
-.types-services li {
-    margin-bottom: 10px;
-    font-size: 16px;
-    list-style: square;
-}
-
-.types-services img {
-    height: 9rem;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-    border: 0.5px solid #000000;
-}
-
-/* Estilos Flota */
-.info-trucks {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
-
-.images-trucks {
-    background-color: #a3947e;
-    padding: 10px;
-    box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
-    width: 75%;
-    margin: 0px auto;
-}
-
-.images-trucks img {
-    margin: 10px;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-}
-
-/* Estilos de Nosotros */
-.contenedor-grid-about-us {
-    display: grid;
-    grid-template-areas:
-        "text image"
-        "faqs image"
-        "location image";
-    grid-template-columns: 60% 40%;
-    grid-template-rows: 25% 50% 25%;
-    gap: 5px;
-    justify-content: center;
-    justify-items: center;
-    align-items: center;
-    text-align: center;
-}
-
-.about-us-text {
-    grid-area: text;
-    font-size: 18px;
-    width: 75%;
-}
-
-.faqs {
-    grid-area: faqs;
-    padding: 20px;
-}
-
-.accordion-button {
-    background-color: #796c59;
-}
-
-.accordion-button:not(.collapsed) {
-    background-color: #b5a58d;
-    color: #000000;
-}
-
-.accordion-collapse {
-    background-color: #f8ebd6;
-}
-
-.about-us-img {
-    grid-area: image;
-    display: flex;
-    flex-direction: column;
-    justify-items: center;
-    align-items: center;
-    margin: 10px;
-    padding: 10px;
-    gap: 8px;
-    background-color: #a3947e;
-    box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
-}
-
-.about-us-img img {
-    width: 80%;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-}
-
-.location {
-    grid-area: location;
-    padding: 1rem;
-    text-align: center;
-}
-
-.location iframe {
-    width: 600px;
-    height: 600px;
-    margin: 0 auto;
-    display: block;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-    border: 0;
-}
-
-/* Estilos contacto */
-.contact {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 20px;
-    margin: 20px auto;
-}
-
-.contact h1 {
-    font-size: 35px;
-}
-
-.contact h3 {
-    font-weight: 400;
-    margin-bottom: 30px;
-}
-
-form {
-    background-color: #a3947e;
-    box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
-    padding: 30px 40px;
-    text-align: left;
-    font-style: italic;
-}
-
+/* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 /* Estilos del footer */
 footer {
-    background-color: #796c59;
-    color: #ffffff;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    width: 100%;
-    margin-top: 20px;
-    padding: 10px;
+  background-color: #796c59;
+  color: #ffffff;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  margin-top: 1.25rem;
+  padding: 0.625rem;
 }
-
 footer p {
-    margin: 0;
+  margin: 0;
 }
 
 .social-media img {
-    width: 1.5rem;
-    margin-right: 3px;
-    margin-left: 10px;
+  width: 1.5rem;
+  margin-right: 0.1875rem;
+  margin-left: 0.625rem;
 }
 
 .contact-info {
-    display: flex;
-    align-items: center;
-    margin-right: 10px;
-    margin-left: 10px;
-    gap: 100px;
+  display: flex;
+  align-items: center;
+  gap: 6.25rem;
+  margin-right: 0.625rem;
+  margin-left: 0.625rem;
 }
-
 .contact-info img {
-    width: 1.5rem;
-    margin-right: 10px;
-    margin-left: 10px;
-    gap: 20px;
-    object-fit: cover;
+  width: 1.5rem;
+  margin-right: 0.625rem;
+  margin-left: 0.625rem;
+  gap: 1.25rem;
+  object-fit: cover;
 }
 
 .info-item {
+  display: flex;
+  align-items: center;
+}
+
+/* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+/* Estilos del banner */
+.banner {
+  background-image: url(../media/trucksBanner.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 15.6rem;
+  background-position: center;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 1.25rem;
+}
+
+.banner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  border-radius: 10px;
+}
+
+.banner-text {
+  font-size: 1.8rem;
+  position: relative;
+  z-index: 2;
+  color: #ffffff;
+}
+
+/* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+/* Estilos de la primer parte del Home */
+.contenedor-grid-main {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto auto;
+  align-items: center;
+  grid-template-areas: "presentation choose" "companies companies";
+}
+
+.presentation {
+  grid-area: presentation;
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+.presentation img {
+  width: 19rem;
+  border: 1px solid #000000;
+  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+}
+.presentation p {
+  font-size: 1.125rem;
+  text-align: left;
+}
+
+.choose-us {
+  grid-area: choose;
+  background-color: #a3947e;
+  color: #ffffff;
+  padding: 1.25rem;
+  margin-top: 1.25rem;
+  text-align: center;
+}
+
+.features {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  margin: 1.25rem auto;
+  max-width: 500px;
+  width: 100%;
+}
+
+.feature-item {
+  font-style: italic;
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 10px;
+}
+.feature-item img {
+  width: 5rem;
+  height: 5rem;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  box-shadow: 0.125rem 0.125rem 0.3125rem rgba(0, 0, 0, 0.3);
+  border: 0.0313rem solid #000000;
+}
+.feature-item p {
+  margin: 0;
+  font-size: 1.125rem;
+}
+
+.highlight {
+  font-size: 1.125rem;
+  font-weight: 500;
+}
+
+/* ------------------------------------------------------------------------------------------ */
+/* Estilos del sector de empresas */
+.companies {
+  grid-area: companies;
+  padding: 2.5rem 1.25rem;
+  text-align: center;
+  margin: 0 auto;
+}
+.companies h2 {
+  font-size: 1.5rem;
+}
+.companies img {
+  width: 7.5rem;
+}
+.companies p {
+  font-size: 1rem;
+  color: #333;
+  margin-top: 1rem;
+}
+
+/* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+/* Estilos servicios */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 2fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 1.25rem;
+  align-items: center;
+  justify-items: center;
+  grid-template-areas: "types benefits" "testimonials testimonials";
+}
+
+.services {
+  padding: 20px;
+  text-align: center;
+}
+.services h1 {
+  font-size: 2.5rem;
+}
+.services p {
+  font-size: 1.1rem;
+}
+
+.types-services {
+  grid-area: types;
+  background-color: #a3947e;
+  color: #ffffff;
+  padding: 1.25rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  box-shadow: 0.625rem 0.625rem 0.3125rem 0rem rgba(0, 0, 0, 0.75);
+}
+
+.service-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.service-item img {
+  height: 9rem;
+  margin-bottom: 1rem;
+  box-shadow: 0.125rem 0.125rem 0.3125rem rgba(0, 0, 0, 0.3);
+}
+.service-item ul li {
+  margin: 0.3rem 0;
+  padding-left: 1rem;
+}
+
+.benefits {
+  grid-area: benefits;
+  padding: 1.25rem;
+}
+.benefits h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.benefits ul {
+  list-style-type: disc;
+  padding-left: 1.8rem;
+  font-size: 1.1rem;
+}
+
+.testimonials {
+  grid-area: testimonials;
+  width: 70%;
+  padding: 1.25rem;
+  background-color: #f5f3f0;
+  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+}
+.testimonials h2 {
+  text-align: center;
+  font-size: 1.8rem;
+  color: #4a433f;
+  margin-bottom: 1.5625rem;
+}
+
+.testimonial-item {
+  background-color: #ffffff;
+  border-left: 0.3125rem solid #796c59;
+  padding: 1rem 1.23rem;
+  margin: 1.25rem 0;
+  font-style: italic;
+  color: #5a534f;
+  box-shadow: 0.125rem 0.125rem 0.3125rem rgba(0, 0, 0, 0.05);
+}
+
+.testimonial-name {
+  margin-top: 0.6rem;
+  text-align: right;
+  font-weight: 600;
+  color: #796c59;
+  font-style: normal;
+}
+
+/* ------------------------------------------------------------------------------------------ */
+/* Estilos tipos de servicios */
+.types-services {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12.5rem;
+  background-color: #a3947e;
+  color: #ffffff;
+  padding: 1.25rem;
+  box-shadow: 0.625rem 0.625rem 0.3125rem 0rem rgba(0, 0, 0, 0.75);
+}
+.types-services li {
+  margin-bottom: 0.625rem;
+  font-size: 1rem;
+  list-style: square;
+}
+.types-services img {
+  height: 9rem;
+  box-shadow: 0.125rem 0.125rem 0.3125rem rgba(0, 0, 0, 0.3);
+  border: 0.0313rem solid #000000;
+}
+
+/* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+/* Estilos Flota */
+.info-trucks {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.images-trucks {
+  background-color: #a3947e;
+  padding: 0.625rem;
+  box-shadow: 0.625rem 0.625rem 0.3125rem 0rem rgba(0, 0, 0, 0.75);
+  width: 75%;
+  margin: 0rem auto;
+}
+.images-trucks img {
+  margin: 0.625rem;
+  box-shadow: 0.125rem 0.125rem 0.3125rem rgba(0, 0, 0, 0.3);
+}
+
+/* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+/* Estilos de Nosotros */
+.contenedor-grid-about-us {
+  display: grid;
+  grid-template-columns: 60% 40%;
+  grid-template-rows: 25% 50% 25%;
+  gap: 1.25rem;
+  align-items: center;
+  justify-items: center;
+  grid-template-areas: "text image" "faqs image" "location image";
+  justify-content: center;
+  text-align: center;
+}
+
+.about-us-text {
+  grid-area: text;
+  font-size: 1.125rem;
+  width: 75%;
+}
+
+.faqs {
+  grid-area: faqs;
+  padding: 1.25rem;
+}
+
+.accordion-button {
+  background-color: #796c59;
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: #b5a58d;
+  color: #000;
+}
+
+.accordion-collapse {
+  background-color: #f8ebd6;
+}
+
+.about-us-img {
+  grid-area: image;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  justify-items: center;
+  margin: 0.625rem;
+  padding: 0.625rem;
+  background-color: #a3947e;
+  box-shadow: 0.625rem 0.625rem 0.3125rem 0rem rgba(0, 0, 0, 0.75);
+}
+.about-us-img img {
+  width: 80%;
+  box-shadow: 0.125rem 0.125rem 0.3125rem rgba(0, 0, 0, 0.3);
+}
+
+.location {
+  grid-area: location;
+  padding: 1rem;
+  text-align: center;
+}
+
+.iframe {
+  width: 37.5rem;
+  height: 37.5rem;
+  margin: 0 auto;
+  display: block;
+  box-shadow: 0.125rem 0.125rem 0.3125rem rgba(0, 0, 0, 0.3);
+  border: 0;
+}
+
+/* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+/* Estilos contacto */
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 1.25rem;
+  margin: 1.25rem auto;
+}
+.contact h1 {
+  font-size: 2.1875rem;
+}
+.contact h2 {
+  font-weight: 400;
+  margin-bottom: 1.875rem;
+}
+
+form {
+  background-color: #a3947e;
+  box-shadow: 0.625rem 0.625rem 0.3125rem 0rem rgba(0, 0, 0, 0.75);
+  padding: 1.875rem 2.5rem;
+  text-align: left;
+  font-style: italic;
+}
+
+/* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+/* Estilos de Celular */
+@media (max-width: 480px) {
+  /* Estilos navbar & banner */
+  nav {
     display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .banner {
+    margin-top: 0.3rem;
+  }
+  .container-fluid {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.625rem;
+  }
+  .collapse {
+    width: 100%;
+  }
+  .collapse ul {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-left: 0;
+  }
+  .collapse ul li {
+    width: 100%;
+    padding: 0.625rem 0;
+    border-top: 0.0625rem solid #ffffff;
+    text-align: center;
+  }
+  /* Estilos Index */
+  .contenedor-grid-main {
+    display: flex;
+    flex-direction: column;
+  }
+  .presentation {
+    display: flex;
+    flex-direction: column;
+    margin: 0.3rem;
+  }
+  .companies-logos img {
+    width: 5rem;
+  }
+  .companies {
+    padding: 0.5rem;
+    margin: 0.3rem;
+  }
+  /* Estilos Servicios */
+  .services-grid {
+    display: flex;
+    flex-direction: column;
+  }
+  .types-services {
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem;
+    gap: 0;
+  }
+  .service-item {
+    margin: 0;
+  }
+  .testimonials {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+  }
+  /* Estilos Flota */
+  .info-trucks {
+    text-align: center;
+  }
+  .images-trucks {
+    width: 90%;
+    margin-bottom: 1rem;
+  }
+  /* Estilos Nosotros */
+  .contenedor-grid-about-us {
+    display: flex;
+    flex-direction: column;
     align-items: center;
+    gap: 0.625rem;
+  }
+  .about-us-text {
+    margin-top: 1rem;
+  }
+  .iframe {
+    margin-bottom: 1rem;
+    height: 18.75rem;
+    width: 18.75rem;
+  }
+  /* Estilos del footer */
+  footer {
+    display: flex;
+    flex-direction: column;
+    margin-top: 0;
+  }
+  footer p {
+    font-size: 0.75rem;
+  }
+  .social-media img {
+    width: 1.2rem;
+  }
+  .contact-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.625rem;
+    margin: 0.4rem;
+  }
+  .contact-info img {
+    width: 1.2rem;
+  }
+}
+/* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+/* Estilos de Tablet */
+@media (min-width: 481px) and (max-width: 1024px) {
+  /* Estilos navbar */
+  .navbar-collapse {
+    display: flex;
+  }
+  /* Estilos Index */
+  .contenedor-grid-main {
+    display: flex;
+    flex-direction: column;
+  }
+  .presentation {
+    margin: 0.5rem;
+  }
+  .companies-logos img {
+    width: 5.5rem;
+  }
+  /* Estilos Servicios */
+  .services-grid {
+    gap: 0;
+  }
+  .types-services {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+  /* Estilos Flota */
+  .info-trucks {
+    text-align: center;
+  }
+  .images-trucks {
+    width: 90%;
+    margin-bottom: 1rem;
+  }
+  /* Estilos Nosotros */
+  .contenedor-grid-about-us {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.625rem;
+  }
+  .about-us-text {
+    margin-top: 1rem;
+  }
+  .iframe {
+    margin-bottom: 1rem;
+    height: 31.25rem;
+    width: 31.25rem;
+  }
+  /* Estilos del footer */
+  footer {
+    display: flex;
+    flex-direction: column;
+    margin-top: 0;
+  }
+  footer p {
+    font-size: 0.75rem;
+  }
+  .social-media img {
+    width: 1.2rem;
+  }
+  .contact-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.625rem;
+    margin: 0.4rem;
+  }
+  .contact-info img {
+    width: 1.2rem;
+  }
 }
 
-
-/* ----------------------------------------------------------- */
-/* DISEÑOS RESPONSIVOS */
-
-/* Media query para celular */
-@media (max-width: 767px) {
-
-    /* Estilos navbar */
-
-    nav {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .banner {
-        margin-top: 0.3rem;
-    }
-
-    .container-fluid {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 10px;
-    }
-
-    .collapse {
-        width: 100%;
-    }
-
-    .collapse ul {
-        flex-direction: column;
-        padding-left: 0;
-        width: 100%;
-    }
-
-    .collapse ul li {
-        width: 100%;
-        padding: 10px 0;
-        border-top: 1px solid #fff;
-        text-align: center;
-    }
-
-    /* Estilos Index */
-
-    .contenedor-grid-main {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .presentation {
-        flex-direction: column;
-        margin: 0.3rem;
-    }
-
-    .companies-logos img {
-        width: 5rem;
-    }
-
-    .companies {
-        padding: 0.5rem;
-        margin: 0.3rem;
-    }
-
-
-    /* Estilos Servicios */
-
-    .services-grid {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .types-services {
-        flex-direction: column;
-        padding: 0.5rem;
-        gap: 0;
-    }
-
-    .service-item {
-        margin: 0;
-    }
-
-    .testimonials {
-        margin-top: 0;
-        margin-bottom: 0.5rem;
-    }
-
-
-    /* Estilos Flota */
-    .info-trucks {
-        text-align: center;
-    }
-
-    .images-trucks {
-        width: 90%;
-        margin-bottom: 1rem;
-    }
-
-
-    /* Estilos Nosotros */
-    .contenedor-grid-about-us {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-    }
-
-    .about-us-text {
-        margin-top: 1rem;
-    }
-
-    .location iframe {
-        margin-bottom: 1rem;
-        height: 300px;
-        width: 300px;
-    }
-
-
-    /* Estilos del footer */
-    footer {
-        flex-direction: column;
-        margin-top: 0;
-    }
-
-    footer p {
-        font-size: 12px;
-    }
-
-    .social-media img {
-        width: 1.2rem;
-    }
-
-    .contact-info {
-        flex-direction: column;
-        align-items: flex-start;
-        margin: 0.4rem;
-        gap: 10px;
-    }
-
-    .contact-info img {
-        width: 1.2rem;
-    }
-}
-
-/* Media query para tablet */
-@media (max-width: 1024px) {
-
-    /* Estilos navbar */
-
-    .navbar-collapse {
-        display: flex;
-    }
-
-    /* Estilos Index */
-    .contenedor-grid-main {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .presentation {
-        margin: 0.5rem;
-    }
-
-    .companies-logos img {
-        width: 5.5rem;
-    }
-
-    /* Estilos Servicios */
-
-    .services-grid {
-        gap: 0;
-    }
-
-    .types-services {
-        flex-direction: column;
-        gap: 0;
-    }
-
-
-    /* Estilos Flota */
-    .info-trucks {
-        text-align: center;
-    }
-
-    .images-trucks {
-        width: 90%;
-        margin-bottom: 1rem;
-    }
-
-
-    /* Estilos Nosotros */
-    .contenedor-grid-about-us {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-    }
-
-    .about-us-text {
-        margin-top: 1rem;
-    }
-
-    .location iframe {
-        margin-bottom: 1rem;
-        height: 500px;
-        width: 500px;
-    }
-
-    /* Estilos del footer */
-    footer {
-        flex-direction: column;
-        margin-top: 0;
-    }
-
-    footer p {
-        font-size: 12px;
-    }
-
-    .social-media img {
-        width: 1.2rem;
-    }
-
-    .contact-info {
-        flex-direction: column;
-        align-items: flex-start;
-        margin: 0.4rem;
-        gap: 10px;
-    }
-
-    .contact-info img {
-        width: 1.2rem;
-    }
-}
+/*# sourceMappingURL=styles.css.map */

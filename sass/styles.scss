@@ -1,0 +1,14 @@
+//Partials
+@use "./generals/variables";
+@use "./generals/globals";
+@use "./generals/header-footer";
+@use "./generals/banner";
+
+@use "./pages/home";
+@use "./pages/services";
+@use "./pages/flota";
+@use "./pages/nosotros";
+@use "./pages/contact";
+
+@use "./generals/_media-phone";
+@use "./generals/_media-tablet";
