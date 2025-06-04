@@ -14,12 +14,17 @@ nav {
         margin-left: auto;
 
         li {
-            margin: 0 .625rem;
+            margin: .3125rem;
 
             a {
                 text-decoration: none;
                 color: $white;
+                padding: .3125rem;
             }
+        }
+
+        li:hover {
+            background-color: $third-color;
         }
     }
 }

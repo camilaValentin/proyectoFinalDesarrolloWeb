@@ -30,11 +30,15 @@ nav ul {
   margin-left: auto;
 }
 nav ul li {
-  margin: 0 0.625rem;
+  margin: 0.3125rem;
 }
 nav ul li a {
   text-decoration: none;
   color: #ffffff;
+  padding: 0.3125rem;
+}
+nav ul li:hover {
+  background-color: #a3947e;
 }
 
 .logo {
