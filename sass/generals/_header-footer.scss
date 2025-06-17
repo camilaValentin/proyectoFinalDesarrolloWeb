@@ -74,3 +74,10 @@ footer {
 .info-item {
     @include flex ($align: center);
 }
+
+.map {
+    a {
+        text-decoration: none;
+        color: $white;
+    }
+}

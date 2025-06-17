@@ -1,0 +1,23 @@
+@use "../generals/variables" as *;
+
+main {
+    ul {
+        li {
+            margin: .625rem;
+
+            a {
+                color: $sixth-color;
+                text-decoration: none;
+                font-size: 1.2rem;
+                font-weight: 500;
+                transition: color 0.3s ease;
+                padding: .3125rem;
+            }
+
+            a:hover {
+                background-color: $third-color;
+            }
+        }
+
+    }
+}

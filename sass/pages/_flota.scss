@@ -6,6 +6,10 @@
     @include flex($direction: column, $align: center);
     margin-top: 1.25rem;
     margin-bottom: 1.25rem;
+
+    h1 {
+        font-size: 2.5rem;
+    }
 }
 
 .images-trucks {
